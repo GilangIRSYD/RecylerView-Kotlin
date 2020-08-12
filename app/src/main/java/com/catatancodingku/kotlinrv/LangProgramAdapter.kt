@@ -1,6 +1,7 @@
 package com.catatancodingku.kotlinrv
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,6 +56,14 @@ class LangProgramAdapter(
             holder.ivLiked.visibility    = View.INVISIBLE
             holder.ivLike.visibility     = View.VISIBLE
 
+        }
+
+        holder.itemView.setOnClickListener {
+            val move    = Intent(context,DetailAct::class.java)
+            move.putExtra("TITLE", titleRow[position])
+            move.putExtra("IMAGE", imageRow[position])
+            move.putExtra("SUBTITLE", subtitleRow[position])
+            context.startActivity(move)
         }
 
     }

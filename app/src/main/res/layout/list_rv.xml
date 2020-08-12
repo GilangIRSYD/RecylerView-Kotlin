@@ -11,7 +11,7 @@
         android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="6dp"
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorSecondaryAccent"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="@id/view2"
         app:layout_constraintTop_toTopOf="@id/view2" />

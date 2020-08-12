@@ -1,6 +1,8 @@
 package com.catatancodingku.kotlinrv
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +12,8 @@ import kotlinx.android.synthetic.main.list_rvtop.view.*
 class HeadlineAdapter(
     val context: Context,
     val imageHeader : IntArray,
-    val titleHeader : Array<String>
+    val titleHeader : Array<String>,
+    val descHeader : Array<String>
 ): RecyclerView.Adapter<MyViewHolder>() {
 
 
@@ -25,6 +28,18 @@ class HeadlineAdapter(
 
         holder.ivHeader.setImageResource(imageHeader[position])
         holder.tvHeader.text    = titleHeader[position]
+
+        holder.itemView.setOnClickListener {
+            val alert   =  AlertDialog.Builder(context)
+            alert.setIcon(imageHeader[position])
+            alert.setTitle(titleHeader[position])
+            alert.setMessage(descHeader[position])
+
+            alert.setPositiveButton("Ok, Saya mengerti",DialogInterface.OnClickListener { dialog, which ->
+                
+            })
+            alert.show()
+        }
     }
 }
 

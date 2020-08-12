@@ -37,7 +37,13 @@ class MainActivity : AppCompatActivity() {
             R.drawable.hybrid
         )
 
-        val adapter     = HeadlineAdapter(this,imageHeadline,titleHeadline)
+        val descHeadline : Array<String> = arrayOf(
+            "Bahasa yang digunakan untuk mengembangakan aplikasi Android native ada Java dan kotlin dan IOS native ada Swift dan Objective - C",
+            "Flutter dan ReactNative adalah sebagian contoh dari mengembangkan aplikasi sekali buid 2 output (Android dan IOS)",
+            "Hybrid ini menjalankan aplikasi di Handphone diatas browser"
+        )
+
+        val adapter     = HeadlineAdapter(this,imageHeadline,titleHeadline,descHeadline)
 
         rv_top.adapter  = adapter
         rv_top.setHasFixedSize(true)
